@@ -1,0 +1,39 @@
+# 实验二 倒排索引 输出样例（由 scripts/verify-local.sh 自动生成）
+
+## 1) 统计
+输入文档数：12
+停词表词数：276
+词条数（不同单词数，即输出行数）：5368
+总词频（所有单词在所有文档中的出现次数之和）：46844
+
+## 2) 题目样例中的关键词
+data <document01.txt,16>;<document02.txt,75>;<document03.txt,2>;<document04.txt,7>;<document05.txt,62>;<document06.txt,2>;<document07.txt,19>;<document10.txt,33>;<document11.txt,32>;<document12.txt,2>;<total,250>.
+hadoop <document01.txt,91>;<document02.txt,36>;<document03.txt,58>;<document04.txt,5>;<document05.txt,38>;<total,228>.
+index <document05.txt,2>;<document06.txt,8>;<document07.txt,16>;<document11.txt,1>;<total,27>.
+mapreduce <document01.txt,115>;<document02.txt,3>;<document03.txt,16>;<document04.txt,4>;<document05.txt,7>;<total,145>.
+search <document01.txt,2>;<document02.txt,1>;<document05.txt,1>;<document07.txt,1>;<document08.txt,5>;<document09.txt,1>;<document10.txt,1>;<document11.txt,1>;<document12.txt,1>;<total,14>.
+
+## 3) 普通词条示例（字母开头的词条，取前 20 行）
+aa <document05.txt,1>;<document07.txt,1>;<total,2>.
+aaa <document05.txt,1>;<total,1>.
+ab <document07.txt,1>;<total,1>.
+abbrev <document09.txt,1>;<total,1>.
+abbreviation <document11.txt,2>;<total,2>.
+abc <document07.txt,3>;<document11.txt,3>;<total,6>.
+ability <document01.txt,1>;<document09.txt,1>;<total,2>.
+able <document02.txt,1>;<document05.txt,1>;<document08.txt,2>;<document09.txt,6>;<document10.txt,13>;<document11.txt,5>;<total,28>.
+abnormal <document10.txt,1>;<total,1>.
+abnormalities <document10.txt,2>;<total,2>.
+aborted <document11.txt,1>;<total,1>.
+abracadabra <document07.txt,2>;<total,2>.
+abs <document07.txt,1>;<document11.txt,10>;<total,11>.
+absence <document02.txt,1>;<document06.txt,1>;<document10.txt,6>;<document11.txt,1>;<total,9>.
+absolute <document01.txt,1>;<document10.txt,1>;<document11.txt,5>;<total,7>.
+absolutely <document09.txt,1>;<document10.txt,1>;<total,2>.
+absoluteuri <document11.txt,8>;<total,8>.
+absoluteuris <document11.txt,1>;<total,1>.
+abstract <document01.txt,1>;<document05.txt,2>;<document11.txt,1>;<document12.txt,1>;<total,5>.
+abstractcollection <document12.txt,1>;<total,1>.
+
+## 4) 停词表生效验证（下面这条 grep 应无输出）
+（无输出 = 停词表已生效：the/and/of/is 均未进入倒排索引）
